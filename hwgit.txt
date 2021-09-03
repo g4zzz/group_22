@@ -1,0 +1,33 @@
+GIT Bash commands
+
+1 See running folder				- pwd
+2 Create new directory			- mkdir foldname
+3 Go into folder				- cd foldname
+4 Create three folders			- cd foldname1 foldname2 foldname3
+5 Go into different folder			- cd whole_path_to_folder
+6 Create five files (3 txt, 2 json)			- touch {filname1,filname2,filname3}.txt {filname4,filname5}.json
+7 Create three folders			- mkdir {foldname1,foldname2,foldname3}
+8 Print folder contents list			- ls -la
+9 Open any file txt				- cat file
+10 Insert any inforvation inside the file		- vim file - Press button "I" - Type anything - Press button "Esc" 
+11 Save changes and quit from file		- Write into console ":wq" and Press button "Enter"
+12 Change directory to the upper level		- cd ..
+13 Move any 2 files to the other directory		- mv file1 file2 /d/path to source
+14 Copy any 2 files to the other directory		- cp file1 file2 /d/path to source
+15 Find file				- find . -name file1
+16 See file contents in real time with grep		- tail -f logfile | grep pattern
+		ignore register		- grep -i pattern file
+		non-matching pattern		- grep -v pattern file
+		print count of patern		- grep -c pattern file
+		searching in directory		- grep -R pattern folder/
+		searching in working dir	- grep -Re pattern[smthsmth] . 
+17 Print out first 10 strings from a file		- head file
+18 Print out last 10 strings from a file		- tail file
+19 Open BIG DATA file without editing		- less file
+20 Print date & time				- date +"%d %m %Y %H:%M"
+========
+
+Task *
+1 Send HTTP request to server			- curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
+2 Write executable script 
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir scriptfolder
+cd scriptfolder
+mkdir {fold1,fold2,fold3}
+cd fold1
+touch {qwe,rty,asd}.txt {fgh,zxc}.json
+mkdir fold5 fold6 fold7
+ls -la
+mv qwe.txt rty.txt /d/VKsendzov/GitBash/Homework/scriptfolder
+
+echo "Done"
