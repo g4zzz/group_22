@@ -507,10 +507,12 @@
 							"// 1) Можете взять любой объект из присланного списка, используйте js random.\r",
 							"let jsonData = pm.response.json();\r",
 							"let randomValue = jsonData[Math.floor(Math.random() * jsonData.length)];\r",
-							"console.log(randomValue, jsonData[randomValue]);\r",
+							"pm.test(\"Get Random Response Value \", function () {\r",
+							"    console.log(randomValue, jsonData[randomValue])});\r",
 							"\r",
 							"// В объекте возьмите Cur_ID и передать через окружение в следующий запрос.\r",
-							"pm.environment.set(\"Cur_ID\", randomValue.Cur_ID);"
+							"pm.test(\"Get Cur_ID To Invironment \", function () {\r",
+							"    pm.environment.set(\"Cur_ID\", randomValue.Cur_ID)});"
 						],
 						"type": "text/javascript"
 					}
@@ -622,46 +624,6 @@
 							"key": "Cur_ID",
 							"value": "{{Cur_ID}}"
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Test#8",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"\r",
-							"// 1) получить список валют\r",
-							"let jsonData = pm.response.json();\r",
-							"\r",
-							"// console.log(randomValue, jsonData[randomValue]);\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "auth_token",
-							"value": "{{token}}",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{URL}}currency",
-					"host": [
-						"{{URL}}currency"
 					]
 				}
 			},
