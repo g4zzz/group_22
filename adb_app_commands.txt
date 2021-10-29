@@ -1,0 +1,14 @@
+*/запустить cmd из папки где adb.exe
+adb devices
+*/установка приложения через ADB
+adb install d:\VKsendzov\ADB\todolist.apk
+*/посмотреть все пакеты на устройстве
+adb shell pm list packages | findstr todolist
+*/ создать и сохранить скрин на компьютер
+adb pull screencap /storage/DCIM/Screenshots/screen.png /users/hlam/Downloads/screen.png
+*/запустить логирование приложения
+adb logcat | findstr -rnw "todolist"
+*/ запустить и сохранить логи на компьютер
+adb logcat | findstr -rnw "todolist" > /users/hlam/Downloads/todolist.log
+*/удаление приложения через ADB
+adb uninstall com.android.todolist
